@@ -19,16 +19,20 @@ app.get("/", function (req, res) {
 });
 
 // your first API endpoint...
-app.get("/api/hello", function (req, res) {
-  res.json({ greeting: "hello API" });
-});
+// app.get("/api/hello", function (req, res) {
+//   res.json({ greeting: "hello API" });
+// });
 
 // timestamp implementation
 app.get("/api/:date?", function (req, res) {
   let dateInput = req.params.date;
 
   // Handle empty parameter
-  let date = dateInput ? new Date(dateInput) : new Date();
+  let date = !dateInput
+    ? new Date()
+    : !isNaN(dateInput)
+    ? new Date(Number(dateInput)) // Handle Unix timestamp
+    : new Date(dateInput); // Handle date string
 
   // Validate the date
   if (isNaN(date.getTime())) {
