@@ -13,12 +13,12 @@
       rel="stylesheet"
       type="text/css"
     />
-    <!-- <link href="style.css" rel="stylesheet" type="text/css"> -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link href="style.css" rel="stylesheet" type="text/css" /> -->
+    <link href="./output.css" rel="stylesheet" />
   </head>
 
-  <body class="bg-gray-100 text-gray-800">
-    <div class="container mx-auto p-6">
+  <body class="bg-gray-300 text-gray-800 select-none break-words">
+    <div class="container mx-auto p-6 min-h-screen flex-col">
       <header class="text-center mb-8">
         <h1 class="text-4xl font-bold text-blue-500">Timestamp Microservice</h1>
         <p class="text-lg text-gray-600">
@@ -31,22 +31,24 @@
         <section class="mb-4">
           <h2 class="text-2xl font-semibold mb-4">API Endpoints</h2>
 
-          <div class="">
+          <div
+            class="flex justify-center items-center flex-col gap-2 bg-gray-100 w-[95%] max-w-2xl mx-auto"
+          >
             <a
               href="/api/2025-04-06"
-              class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 "
+              class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 w-full"
             >
               Example: [project url]/api/2025-04-06
             </a>
             <a
               href="/api/1680777600000"
-              class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 "
+              class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 w-full"
             >
               Example: [project url]/api/1680777600000
             </a>
             <a
               href="/api/"
-              class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 "
+              class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 w-full"
             >
               Example: [project url]/api/
             </a>
