@@ -8,7 +8,7 @@
   --color-ivory: #f4eae6;
   --color-coral: #e57f84;
   --color-mistyBlue: #2f5061;
-  --shadow-4xl: 0px 2px 4px 3px #2f5061;
+  --shadow-4xl: 0px 2px 5px 3px #2f5061;
   --text-shadow-xl: 2px 2px 5px rgba(47, 80, 97, 0.5);
 }
 
@@ -22,49 +22,3 @@ body {
     font-size: clamp(1.6rem, 4vw, 2rem);
   }
 }
-
-/****** Main Styling ******/
-/* body {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  color: #222;
-  background-color: #fafafa;
-  text-align: center;
-  line-height: 1.4em;
-}
-
-.container {
-  padding: 0;
-  margin-top: 40px;
-}
-
-h3 {
-  margin-top: 30px;
-}
-
-hr {
-  margin: 25px;
-}
-
-.footer {
-  margin-top: 40px;
-}
-
-code {
-  font-family: monospace;
-  padding: 2px;
-  color: black;
-  background-color: #fff;
-}
-
-ul {
-  list-style-type: none;
-}
-
-li {
-  margin-bottom: 0.5em;
-}
-
-a {
-  color: #2574a9;
-} */

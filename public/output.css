@@ -8,6 +8,8 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-gray-400: oklch(70.7% 0.022 261.325);
+    --color-gray-600: oklch(44.6% 0.03 256.802);
     --spacing: 0.25rem;
     --container-2xl: 42rem;
     --text-sm: 0.875rem;
@@ -178,6 +180,9 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .my-4 {
+    margin-block: calc(var(--spacing) * 4);
+  }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
   }
@@ -190,6 +195,9 @@
   .flex {
     display: flex;
   }
+  .table {
+    display: table;
+  }
   .min-h-screen {
     min-height: 100vh;
   }
@@ -198,6 +206,15 @@
   }
   .max-w-2xl {
     max-width: var(--container-2xl);
+  }
+  .flex-1 {
+    flex: 1;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -217,14 +234,24 @@
   .rounded {
     border-radius: 0.25rem;
   }
-  .bg-coral {
-    background-color: var(--color-coral);
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-coral {
+    border-color: var(--color-coral);
+  }
+  .border-tealGreen {
+    border-color: var(--color-tealGreen);
   }
   .bg-ivory {
     background-color: var(--color-ivory);
   }
   .bg-mistyBlue {
     background-color: var(--color-mistyBlue);
+  }
+  .bg-tealGreen {
+    background-color: var(--color-tealGreen);
   }
   .p-2 {
     padding: calc(var(--spacing) * 2);
@@ -289,17 +316,24 @@
   .italic {
     font-style: italic;
   }
+  .underline {
+    text-decoration-line: underline;
+  }
   .shadow-4xl {
-    --tw-shadow: 0px 2px 4px 3px var(--tw-shadow-color, #2f5061);
+    --tw-shadow: 0px 2px 5px 3px var(--tw-shadow-color, #2f5061);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .text-shadow-xl {
     text-shadow: 2px 2px 5px var(--tw-text-shadow-color, rgba(47, 80, 97, 0.5));
   }
-  .hover\:bg-tealGreen {
+  .hover\:bg-coral {
     &:hover {
       @media (hover: hover) {
-        background-color: var(--color-tealGreen);
+        background-color: var(--color-coral);
       }
     }
   }
@@ -311,6 +345,11 @@ body {
   h1 {
     font-size: clamp(1.6rem, 4vw, 2rem);
   }
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @property --tw-font-weight {
   syntax: "*";
@@ -381,6 +420,11 @@ body {
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-text-shadow-color {
   syntax: "*";
   inherits: false;
@@ -393,6 +437,7 @@ body {
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
@@ -408,6 +453,7 @@ body {
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-outline-style: solid;
       --tw-text-shadow-color: initial;
       --tw-text-shadow-alpha: 100%;
     }
