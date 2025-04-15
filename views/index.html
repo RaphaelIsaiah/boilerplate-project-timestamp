@@ -8,47 +8,48 @@
       href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png"
       type="image/x-icon"
     />
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css?family=Roboto"
       rel="stylesheet"
       type="text/css"
-    />
+    /> -->
     <!-- <link href="style.css" rel="stylesheet" type="text/css" /> -->
     <link href="./output.css" rel="stylesheet" />
   </head>
 
-  <body class="bg-gray-300 text-gray-800 select-none break-words">
-    <div class="container mx-auto p-6 min-h-screen flex-col">
-      <header class="text-center mb-8">
-        <h1 class="text-4xl font-bold text-blue-500">Timestamp Microservice</h1>
-        <p class="text-lg text-gray-600">
+  <body class="bg-ivory text-mistyBlue break-words p-2 text-center font-one">
+    <div class="min-h-screen pt-2">
+      <header class="mb-8 p-2">
+        <h1 class="text-4xl font-bold text-shadow-xl">
+          Timestamp Microservice
+        </h1>
+        <p class="text-lg text-tealGreen italic">
           Convert dates and timestamps with style!
         </p>
       </header>
-      <!-- <hr /> -->
 
-      <main class="text-center">
-        <section class="mb-4">
-          <h2 class="text-2xl font-semibold mb-4">API Endpoints</h2>
+      <main>
+        <section class="mb-6">
+          <h2 class="text-2xl font-semibold mb-2">API Endpoints</h2>
 
           <div
-            class="flex justify-center items-center flex-col gap-2 bg-gray-100 w-[95%] max-w-2xl mx-auto"
+            class="text-ivory flex flex-col justify-center items-center max-w-2xl w-full mx-auto gap-4"
           >
             <a
               href="/api/2025-04-06"
-              class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 w-full"
+              class="bg-coral shadow-4xl w-full p-4 rounded hover:bg-tealGreen"
             >
               Example: [project url]/api/2025-04-06
             </a>
             <a
               href="/api/1680777600000"
-              class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 w-full"
+              class="bg-coral shadow-4xl w-full p-4 rounded hover:bg-tealGreen"
             >
               Example: [project url]/api/1680777600000
             </a>
             <a
               href="/api/"
-              class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 w-full"
+              class="bg-coral shadow-4xl w-full p-4 rounded hover:bg-tealGreen"
             >
               Example: [project url]/api/
             </a>
@@ -56,22 +57,25 @@
         </section>
 
         <section>
-          <h2 class="text-2xl font-semibold mb-4">Example Output</h2>
-          <p>
-            <code
-              >{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00
-              GMT"}</code
-            >
-          </p>
+          <h2 class="text-2xl font-semibold mb-2">Example Output</h2>
+          <div
+            class="bg-mistyBlue rounded max-w-2xl mx-auto p-4 overflow-x-auto"
+          >
+            <pre class="text-ivory font-mono text-sm text-left whitespace-pre">
+              <code>
+ {
+    "unix": 1451001600000,
+    "utc": "Fri, 25 Dec 2015 00:00:00 GMT"  
+ }</code>
+            </pre>
+          </div>
         </section>
       </main>
 
-      <footer class="mt-8 text-center">
-        <hr class="border-2 mb-4" />
-        <p class="text-gray-500 text-sm">
-          © 2025 Raphael's Timestamp Microservice
-        </p>
-      </footer>
+      <!-- <footer class="">
+        <hr class="" />
+        <p class="">© 2025 Raphael's Timestamp Microservice</p>
+      </footer> -->
     </div>
   </body>
 </html>
