@@ -3,7 +3,6 @@
 
 @theme {
   --font-one: "Roboto", sans-serif;
-  /* --color-*: initial; */
   --color-tealGreen: #4297a0;
   --color-ivory: #f4eae6;
   --color-coral: #e57f84;
@@ -14,7 +13,6 @@
 
 body {
   font-size: clamp(1.2rem, 3vw, 1.4rem);
-  /* color: rgb(47, 80, 97); */
 }
 
 @media (max-width: 400px) {
