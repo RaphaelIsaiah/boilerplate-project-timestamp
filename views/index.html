@@ -1,32 +1,75 @@
 <!DOCTYPE html>
 
 <html>
-   <head>
-      <title>Timestamp Microservice | freeCodeCamp.org</title>
-      <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="style.css" rel="stylesheet" type="text/css">
-   </head>
+  <head>
+    <title>Timestamp Microservice</title>
+    <link
+      rel="shortcut icon"
+      href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- <link href="style.css" rel="stylesheet" type="text/css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
 
-   <body>
-    <h1>Timestamp Microservice</h1>
-    <hr />
-    <div class="container">
-      <h2>Example Usage:</h2>
-      <ul>
-        <li><a href="api/2015-12-25">[project url]/api/2015-12-25</a></li>
-        <li><a href="api/1451001600000">[project url]/api/1451001600000</a></li>
-      </ul>
+  <body class="bg-gray-100 text-gray-800">
+    <div class="container mx-auto p-6">
+      <header class="text-center mb-8">
+        <h1 class="text-4xl font-bold text-blue-500">Timestamp Microservice</h1>
+        <p class="text-lg text-gray-600">
+          Convert dates and timestamps with style!
+        </p>
+      </header>
+      <!-- <hr /> -->
 
-      <h2>Example Output:</h2>
-      <p>
-        <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code>
-      </p>
-    </div>
-    <div class="footer">
-      <p>
-        By <a href="https://www.freecodecamp.org/">freeCodeCamp.org</a>
-      </p>
+      <main class="text-center">
+        <section class="mb-4">
+          <h2 class="text-2xl font-semibold mb-4">API Endpoints</h2>
+
+          <div class="">
+            <a
+              href="/api/2025-04-06"
+              class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 "
+            >
+              Example: [project url]/api/2025-04-06
+            </a>
+            <a
+              href="/api/1680777600000"
+              class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 "
+            >
+              Example: [project url]/api/1680777600000
+            </a>
+            <a
+              href="/api/"
+              class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 "
+            >
+              Example: [project url]/api/
+            </a>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-semibold mb-4">Example Output</h2>
+          <p>
+            <code
+              >{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00
+              GMT"}</code
+            >
+          </p>
+        </section>
+      </main>
+
+      <footer class="mt-8 text-center">
+        <hr class="border-2 mb-4" />
+        <p class="text-gray-500 text-sm">
+          © 2025 Raphael's Timestamp Microservice
+        </p>
+      </footer>
     </div>
   </body>
 </html>
