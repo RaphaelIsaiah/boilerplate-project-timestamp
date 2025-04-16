@@ -22,7 +22,7 @@ app.get("/", function (req, res) {
 });
 
 // Timestamp implementation
-app.get("/api/:date?", function (req, res) {
+app.get(["/api", "/api/:date?"], function (req, res) {
   // Handle empty parameter case FIRST
   if (!req.params.date) {
     const now = new Date();
