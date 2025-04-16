@@ -23,21 +23,26 @@ app.get("/", function (req, res) {
 
 // Timestamp implementation
 app.get("/api/:date?", function (req, res) {
-  let dateInput = req.params.date;
+  // Handle empty parameter case FIRST
+  if (!req.params.date) {
+    const now = new Date();
+    return res.json({
+      unix: now.getTime(),
+      utc: now.toUTCString(),
+    });
+  }
 
-  // Handle empty parameter
-  let date = !dateInput
-    ? new Date()
-    : !isNaN(dateInput)
-    ? new Date(Number(dateInput)) // Handle Unix timestamp
-    : new Date(dateInput); // Handle date string
+  let dateInput = req.params.date;
+  let date;
+
+  // Handle non-empty parameters
+  date = !isNaN(dateInput) ? new Date(Number(dateInput)) : new Date(dateInput);
 
   // Validate the date
   if (isNaN(date.getTime())) {
     return res.json({ error: "Invalid Date" });
   }
 
-  // Return Unix and UTC timestamps
   res.json({
     unix: date.getTime(),
     utc: date.toUTCString(),
