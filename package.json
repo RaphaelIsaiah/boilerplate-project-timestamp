@@ -4,7 +4,9 @@
   "description": "An FCC Backend Challenge",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev:css": "tailwindcss -i ./src/input.css -o ./public/output.css --watch",
+    "build:css": "tailwindcss -i ./src/input.css -o ./public/output.css --minify"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.4",
