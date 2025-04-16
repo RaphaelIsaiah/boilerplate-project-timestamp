@@ -1,8 +1,6 @@
 // index.js
 // where your node app starts
 
-// Trigger clean build
-
 // init project
 var express = require("express");
 const path = require("path");
@@ -23,28 +21,24 @@ app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "views", "index.html"));
 });
 
-// your first API endpoint...
-// app.get("/api/hello", function (req, res) {
-//   res.json({ greeting: "hello API" });
-// });
-
-// timestamp implementation
 app.get("/api/:date?", function (req, res) {
   let dateInput = req.params.date;
+  let date;
 
   // Handle empty parameter
-  let date = !dateInput
-    ? new Date()
-    : !isNaN(dateInput)
-    ? new Date(Number(dateInput)) // Handle Unix timestamp
-    : new Date(dateInput); // Handle date string
+  if (!dateInput) {
+    date = new Date();
+  } else {
+    date = !isNaN(dateInput)
+      ? new Date(Number(dateInput))
+      : new Date(dateInput);
+  }
 
   // Validate the date
   if (isNaN(date.getTime())) {
     return res.json({ error: "Invalid Date" });
   }
 
-  // Return Unix and UTC timestamps
   res.json({
     unix: date.getTime(),
     utc: date.toUTCString(),
