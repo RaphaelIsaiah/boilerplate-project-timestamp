@@ -1,6 +1,8 @@
 // index.js
 // where your node app starts
 
+// Trigger clean build
+
 // init project
 var express = require("express");
 const path = require("path");
