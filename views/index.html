@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Timestamp Microservice</title>
     <link
       rel="shortcut icon"
@@ -10,12 +11,13 @@
     />
     <link href="/output.css" rel="stylesheet" />
   </head>
-
   <body
     class="bg-ivory text-mistyBlue break-words p-2 text-center font-one flex flex-col min-h-screen"
   >
     <header class="mb-8 p-2">
-      <h1 class="text-4xl font-bold text-shadow-xl">Timestamp Microservice</h1>
+      <h1 class="text-4xl font-bold text-shadow-xl p-3">
+        Timestamp Microservice
+      </h1>
       <p class="text-lg text-tealGreen italic">
         Convert dates and timestamps with style!
       </p>
@@ -30,19 +32,19 @@
         >
           <a
             href="/api/2025-04-06"
-            class="bg-tealGreen shadow-4xl w-full p-4 rounded hover:bg-coral"
+            class="bg-tealGreen shadow-4xl w-full p-4 rounded hover:bg-coral active:bg-coral"
           >
             Example: [project url]/api/2025-04-06
           </a>
           <a
             href="/api/1680777600000"
-            class="bg-tealGreen shadow-4xl w-full p-4 rounded hover:bg-coral"
+            class="bg-tealGreen shadow-4xl w-full p-4 rounded hover:bg-coral active:bg-coral"
           >
             Example: [project url]/api/1680777600000
           </a>
           <a
             href="/api/"
-            class="bg-tealGreen shadow-4xl w-full p-4 rounded hover:bg-coral"
+            class="bg-tealGreen shadow-4xl w-full p-4 rounded hover:bg-coral active:bg-coral"
           >
             Example: [project url]/api/
           </a>
@@ -69,7 +71,3 @@
     </footer>
   </body>
 </html>
-
-<!-- npx tailwindcss -i ./src/input.css -o ./public/output.css --watch
- "build": "npx tailwindcss -i ./src/input.css -o ./public/output.css --minify"
--->
